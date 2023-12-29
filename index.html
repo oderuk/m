@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Image Gallery</title>
+</head>
+<body>
+
+  <h1>Image Gallery</h1>
+
+  <div id="imageContainer"></div>
+
+  <script>
+    // Number of images
+    const numberOfImages = 230;
+
+    // Reference to the image container
+    const imageContainer = document.getElementById('imageContainer');
+
+    // Loop to generate image tags
+    for (let i = 1; i <= numberOfImages; i++) {
+      const img = document.createElement('img');
+      img.src = `./${i}.jpg`; // Adjust the path to your images
+      img.alt = `Image ${i}`;
+      imageContainer.appendChild(img);
+    }
+  </script>
+
+</body>
+</html>
